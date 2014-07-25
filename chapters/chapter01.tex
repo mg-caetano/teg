@@ -16,7 +16,7 @@ Para explicar el método, se plantea el siguiente escenario. Tres autores (Marí
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{fig1.png}
+  \includegraphics[width=0.75\textwidth]{fig1.png}
   \caption{Explicación del mecanismo de visualización History Flow}
   \label{fig1}
 \end{figure}
@@ -34,7 +34,7 @@ El criterio de codificación toma las primeras tres letras para determinar el co
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{fig6.png}
+  \includegraphics[width=0.75\textwidth]{fig6.png}
   \caption{Codificación de palabras a color}
   \label{fig6}
 \end{figure}
@@ -43,7 +43,7 @@ La técnica del Cromograma parte de esta codificación y permite visualizar una 
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{fig7.png}
+  \includegraphics[width=0.75\textwidth]{fig7.png}
   \caption{Creando un Cromograma}
   \label{fig7}
 \end{figure}
@@ -58,7 +58,7 @@ Estos resúmenes se construyen para un período dado usando un enfoque basado en
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{fig10.png}
+  \includegraphics[width=0.75\textwidth]{fig10.png}
   \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett}
   \label{fig10}
 \end{figure}
@@ -72,7 +72,7 @@ Inicialmente, la herramienta carga un grupo de usuarios participando en la edici
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{fig11.png}
+  \includegraphics[width=0.75\textwidth]{fig11.png}
   \caption{Visualización Revert Graph del artículo de Charles Darwin}
   \label{fig11}
 \end{figure}
@@ -85,14 +85,14 @@ La visualización emplea una perspectiva de análisis de red. Este enfoque se ba
 \begin{figure}
   \begin{subfigure}[b]{0.5\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{fig12.png}
+    \includegraphics[width=0.75\textwidth]{fig12.png}
     \caption{Visualización de lazo}
     \label{fig12}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
-    \includegraphics[width=\textwidth]{fig13.png}
+    \includegraphics[width=0.75\textwidth]{fig13.png}
     \caption{Visualización de cadena}
     \label{fig13}
   \end{subfigure}
@@ -132,12 +132,12 @@ Como se muestra en la Figura \ref{fig16}, la arquitectura del Web Scraper incluy
 
 \begin{figure}[ht]
   \centering
-  \includegraphics{fig16.png}
+  \includegraphics[width=0.75\textwidth]{fig16.png}
   \caption{Arquitectura del sistema WikiMetrics-UCV}
   \label{fig16}
 \end{figure}
 
 El funcionamiento del Web Scraper sucede de la siguiente manera. Dado el pool de semillas almacenadas en la base de datos por la herramienta de URLs, el Web Scraper selecciona la URL a visitar y se descarga el documento HTML. El documento pasa por un proceso de análisis sintáctico mediante el cual se extrae toda la información especificada por el usuario usando expresiones XPath. Está información es luego normalizada y almacenada en la base de datos.
 
-La aplicación se implementó en lenguaje Python en combinación con una base de datos NoSQL manejada con MongoDB. Dicho proyecto se encuentra hospedado en la siguiente dirección de GitHub %\url{https://github.com/bworwa/wiki_metrics_ucv}.
+La aplicación se implementó en lenguaje Python en combinación con una base de datos NoSQL manejada con MongoDB. Dicho proyecto se encuentra hospedado en la siguiente dirección de GitHub \url{https://github.com/bworwa/wiki_metrics_ucv}.
 
