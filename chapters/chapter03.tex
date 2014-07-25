@@ -1,4 +1,4 @@
-Las visualizaciones interactivas web se implementan combinando un conjunto variado de tecnologías: HTML para el contenido de la página, CSS para la apariencia, JavaScript para la interacción, SVG para los gráficos vectoriales, entre otros. Estas tecnologías funcionan de manera integrada sobre la representación compartida de la página llamada Modelo de Objetos de Documento (DOM) [D3-InfoVis].
+Las visualizaciones interactivas web se implementan combinando un conjunto variado de tecnologías: HTML para el contenido de la página, CSS para la apariencia, JavaScript para la interacción, SVG para los gráficos vectoriales, entre otros. Estas tecnologías funcionan de manera integrada sobre la representación compartida de la página llamada Modelo de Objetos de Documento (DOM) \cite{Bostock2011a}.
 
 Actualmente existen toolkits que aprovechan estas tecnologías para la generación de visualizaciones de datos. El toolkit apropiado para cada caso debe seleccionarse tomando en consideración los requerimientos del proyecto, como por ejemplo el tipo de visualización, la tecnologías a usar, tiempo de desarrollo disponible y hasta la compatibilidad con navegadores, entre otros. Murray (2013) clasifica los toolkits disponibles de la siguiente manera:
 
@@ -17,40 +17,37 @@ En este capítulo se presentan las más recientes especificaciones de las tecnol
 
 HTML es el lenguaje de marcado para definir la estructura de las páginas web [w3c]. Está compuesto por elementos que definen el tipo de contenido que va a ser desplegado por el navegador y son a su vez estructuras semánticas que describen la función de cada parte del documento sin ambigüedad  [webplatform]. El estándar HTML es mantenido por W3C (World Wide Web Consortium) [mozilla:Introduction to HTML].
 
-En un documento HTML un elemento se denota mediante un par de etiquetas, una inicial y otra final, como se muestra en la Figura X. Un elemento puede contener otros elementos o texto. La información adicional asociada a un elemento se agrega mediante atributos colocados en la etiqueta inicial. En la Figura X se muestra como se puede usar el atributo "id" para proporcionar información semántica sobre el elemento.
+En un documento HTML un elemento se denota mediante un par de etiquetas, una inicial y otra final, como se muestra en la Figura \ref{sniphtml}. Un elemento puede contener otros elementos o texto. La información adicional asociada a un elemento se agrega mediante atributos colocados en la etiqueta inicial. En la Figura \ref{sniphtml} se muestra como se puede usar el atributo 'id' para proporcionar información semántica sobre el elemento.
 
-% TO-DO: Revisar como formatear codigo en LaTeX
-<div id="nav”></div>
+%TO-DO: Soporte de lenguajes html, css, javascript y svg
+\lstinputlisting[label=sniphtml,caption={Snippet de código HTML}]{snippets/snippet.html}
 
 HTML5 es la quinta revisión del estándar HTML. Esta especificación intenta resolver las fallas que las anteriores tenían en el área de las aplicaciones web, ofreciendo un lenguaje de marcado y un conjunto de scripting APIs enfocados en la semántica [w3c:HTML5]. En cuanto al lenguaje de marcado, se introduce una conjunto de elementos y atributos nuevos entre los cuales están [W3C:HTML5-diff]:
 
 \begin{itemize}
   \item Los semánticos, que son aquellos enfocados en mejorar la estructura del documento, como por ejemplo section, nav y header;
   \item Los multimedia, enfocados en eliminar las dependencias de plugins propietarios. Entre ellos están vídeo, audio y canvas;
-  \item Los de formulario, que agregan un conjunto de valores (tel, email, url, color, etc.) al atributo "type" del elemento “input”. Esto mejora la experiencia de usuario ya que su entrada es validada antes  de ser enviada al servidor, reduciendo así el tiempo de respuesta.
+  \item Los de formulario, que agregan un conjunto de valores (tel, email, url, color, etc.) al atributo 'type' del elemento 'input'. Esto mejora la experiencia de usuario ya que su entrada es validada antes  de ser enviada al servidor, reduciendo así el tiempo de respuesta.
 \end{itemize}
 
 Entre los APIs ofrecidos están aquellos para el control de video y audio, validación de formularios y el canvas 2D, entre otros [W3C:HTML5-diff]. El Canvas API es una tecnología de scripting que permite la creación y alteración de imágenes rasterizadas (bitmaps). Debido a que no tiene DOM, puede ejecutarse con bastante rapidez. Es soportado de manera nativa en la mayoría de los navegadores modernos en incluso en dispositivos móviles [w3c:webdesign/graphics].
 
 \subsection{CSS}
 
-Según la W3C CSS es un "mecanismo sencillo para agregar estilo (tipografía, color y espaciado) a documentos web" [w3C:CSS]. Las hojas de estilo CSS ofrecen control sobre el formato y la disposición de un documento basado en XML. CSS trabaja sobre un sistema de reglas las cuales seleccionan un elemento que requiere de formato y luego establece valores a las diferentes propiedades del elemento [webplatform].
+Según la W3C CSS es un 'mecanismo sencillo para agregar estilo (tipografía, color y espaciado) a documentos web' [w3C:CSS]. Las hojas de estilo CSS ofrecen control sobre el formato y la disposición de un documento basado en XML. CSS trabaja sobre un sistema de reglas las cuales seleccionan un elemento que requiere de formato y luego establece valores a las diferentes propiedades del elemento [webplatform].
 
 Una de las grandes ventajas de CSS es que permite la separación de estructura (HTML) y presentación (CSS), y con ello se simplifica el mantenimiento de una página, se promueve la reutilización de hojas de estilo y la se facilita la adaptación de páginas a diferentes entornos [w3c:HTML and CSS].
 
 La sintaxis de CSS posee dos bloques básicos de construcción: la propiedad, que es un identificador, y el valor, el cual describe como esta propiedad debe ser manejada por el motor del navegador. La funcionalidad principal de CSS es de establecer un valor específico a una propiedad. Un par propiedad-valor se denomina declaración. El par es separado por dos puntos. Las declaraciones son agrupadas en bloques delimitados por llaves, mejor llamados bloques de declaración. Cada bloque de declaración está precedido por un selector que es una condición que selecciona algunos elementos de la página. El par selector-bloque de declaración es lo que se conoce como regla [developer.mozilla:css].
 
-%p {
-%   line-height: 2;
-%   color: green;  
-% }
+\lstinputlisting[label=snipcss,caption={Snippet de código CSS}]{snippets/snippet.css}
 
-Las hojas de estilo pueden declararse dentro de un elemento HTML, dentro de la sección "head" de un documento HTML o en un archivo CSS externo. Para determinar qué estilo va a ser usado cuando hay más de un estilo declarado para un mismo elemento HTML, se sigue lo que se conoce como orden de escascadamiento. En él los estilos prevalecen según el siguiente orden de prioridad ascendente [w3schools:css-howto]:
+Las hojas de estilo pueden declararse dentro de un elemento HTML, dentro de la sección 'head' de un documento HTML o en un archivo CSS externo. Para determinar qué estilo va a ser usado cuando hay más de un estilo declarado para un mismo elemento HTML, se sigue lo que se conoce como orden de escascadamiento. En él los estilos prevalecen según el siguiente orden de prioridad ascendente [w3schools:css-howto]:
 
 \begin{itemize}
   \item Estilo predefinido del navegador
   \item Hoja de estilo externa
-  \item Estilos en la sección "head" del documento HTML
+  \item Estilos en la sección 'head' del documento HTML
   \item Estilos dentro del elemento HTML
 \end{itemize}
 
@@ -62,7 +59,7 @@ CCS3 es la última revisión del lenguaje CSS y tiene como objetivo extender la 
 
 El modelo de objetos de documento (DOM) es una interfaz independiente de la plataforma y el lenguaje que permite a los programas y scripts el acceso dinámico y la actualización del contenido, estructura y estilo de documentos [w3c]. El DOM se crea al momento de cargar una página y es construido como un objeto con estructura de árbol[w3school], como se muestra en la Figura X. El DOM provee una representación del documento como una estructura de nodos que posee propiedades, métodos y manejadores de eventos. El DOM esencialmente conecta la página web a los scripts o lenguajes de programación [developer.mozilla/.../DOM].
 
-[agregar imagen del inspector]
+%TO-DO: [agregar imagen del inspector]
 
 \subsection{JavaScript}
 
@@ -86,20 +83,7 @@ Haciendo uso del DOM, JavaScript puede crear HTML dinámico de la siguiente mane
 
 El siguiente es un ejemplo de una página HTML que haciendo uso de JavaScript muestra la fecha y hora local luego de presionar un botón.
 
-%<!DOCTYPE html>
-%<html>
-%<body>
-%<h1>My First JavaScript</h1>
-%<p>Click Date to display current day, date, and time.</p>
-%<button type="button" onclick="myFunction()">Date</button>
-%<p id="demo"></p>
-%<script>
-%function myFunction() {
-%    document.getElementById("demo").innerHTML = Date();
-%}
-%</script>
-%</body>
-%</html> 
+\lstinputlisting[label=snipjs,caption={Snippet de código JavaScript}]{snippets/snippetjs.html}
 
 \subsection{SVG}
 
@@ -107,17 +91,8 @@ SVG es el lenguaje de marcado XML para describir gráficos de aplicación e imá
 
 Usando SVG se pueden crear gráficos de alta calidad, completamente escalables y reusables; desde gráficos simples hasta potenciar páginas webs, desde diagramas interactivos hasta visualizaciones de datos. SVG es soportado por todos los browser modernos y está disponible para una gran variedad de dispositivos móviles [w3c:webdesign/graphics].
 
-El siguiente es un ejemplo de uso de SVG para dibujar un círculo con un gradiente que simula el efecto de profundidad.
-
-%<svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 100 100">  
-%  <defs>
-%     <radialGradient id="rg" cx="100" cy="100" fx="80" fy="80" gradientUnits="userSpaceOnUse">
-%       <stop offset="5%" stop-color="lightskyblue" />
-%       <stop offset="100%" stop-color="darkblue" />
-%     </radialGradient>
-%  </defs>
-%  <circle id="circle_1" cx="100" cy="100" r="95" fill="url(#rg)"/>
-%</svg>
+El siguiente es un ejemplo del uso de SVG para dibujar un círculo con un gradiente que simula el efecto de profundidad
+\lstinputlisting[label=snipsvg,caption={Snippet de código SVG}]{snippets/snippet.svg}
 
 \subsection{D3.js}
 
