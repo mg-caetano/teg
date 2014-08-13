@@ -1,23 +1,23 @@
-Un wiki es una aplicación web que permite a los usuarios la adición, modificación o eliminación de contenido en colaboración con otros \cite{Wikipediad}. Dentro de las implementaciones de wiki existentes, el proyecto de enciclopedia Wikipedia es el más popular en Internet y una de las páginas web más grandes del mundo con más de 18 billones de visitas al mes y 30 millones de artículos en 287 idiomas \cite{Wikipediae}.  
-A diferencia de las enciclopedias tradicionales, Wikipedia permite a cualquier usuario registrado o no la edición del contenido de sus artículos. Ningún usuario es considerado el dueño de un artículo, y su contenido no es vetado ni aprobado autoridad reconocida alguna. Es por ello que los editores deben ponerse de acuerdo sobre el contenido y estructura del artículo a través del consenso \cite{Wikipediae}. 
+Un wiki es una aplicación web que permite a los usuarios la adición, modificación o eliminación de contenido en colaboración con otros \cite{Wiki}. Dentro de las implementaciones de wiki existentes, el proyecto de enciclopedia Wikipedia es el más popular en Internet y una de las páginas web más grandes del mundo con más de 18 billones de visitas al mes y 30 millones de artículos en 287 idiomas \cite{Wikipedia}.
+A diferencia de las enciclopedias tradicionales, Wikipedia permite a cualquier usuario registrado o no la edición del contenido de sus artículos. Ningún usuario es considerado el dueño de un artículo, y su contenido no es vetado ni aprobado por autoridad reconocida alguna. Es por ello que los editores deben ponerse de acuerdo sobre el contenido y estructura del artículo a través del consenso \cite{Wikipedia}.
 
-Para facilitar la colaboración, todos los artículos de Wikipedia tienen asociado un historial de revisiones, que permite a los editores restaurar contenido perdido y deshacer cambios no deseados. El historial de revisiones, es una página que contiene una lista de las ediciones realizadas sobre un artículo, que incluyen fecha y hora de cada edición, el nombre de usuario o IP del editor y un resumen de edición \cite{Wikipediac}.
+Para facilitar la colaboración, todos los artículos de Wikipedia tienen asociado un historial de revisiones, que permite a los editores restaurar contenido perdido y deshacer cambios no deseados. El historial de revisiones, es una página que contiene una lista de las ediciones realizadas sobre un artículo, que incluyen la fecha y hora de cada edición, el nombre de usuario o IP del editor y un resumen de edición \cite{WikiHelp}.
 
-Según Scalise, los sistemas basados en MediaWiki, como Wikipedia, no explotan propiedades presentes en los datos de los historiales; en particular, la evolución de cada artículo, la comunidad de usuarios participantes y la frecuencia de los cambios. Además enfatiza que carecen de una visualización gráfica de los datos \cite{Scalise2008a}. Esto último ha sido el objeto de estudio de muchas investigaciones.
+Según Scalise, los sistemas basados en MediaWiki, como Wikipedia, no explotan propiedades presentes en los datos de los historiales; en particular, la evolución de cada artículo, la comunidad de usuarios participantes y la frecuencia de los cambios. Además enfatiza que carecen de una visualización gráfica de los datos \cite{Sca08}. Esto último ha sido el objeto de estudio de muchas investigaciones.
 
-La literatura sobre visualizaciones de historiales de Wikipedia contiene en general visualizaciones que pueden clasificarse en dos grupos. El primero de ellos se enfoca en el estudio de la interacción de los editores de un artículo mediante visualizaciones de redes \cite{Sabel2007a}\cite{Suh2007a}\cite{Keegan2012a}, mientras que el segundo se centra en el estudio de la evolución de las propiedades de los artículos mediante su visualización en series temporales \cite{Viegas2004a}\cite{Wattenberg2007a}\cite{Nunes2008a}. Estos trabajos han permitido analizar la dinámica y coordinación de los editores, como también la detección de patrones de actividad, conflicto y vandalismo. En general, han permitido alcanzar conclusiones importantes sobre el comportamiento de la comunidad colaborativa de Wikipedia. 
+La literatura sobre visualizaciones de historiales de Wikipedia contiene en general visualizaciones que pueden clasificarse en dos grupos. El primero de ellos se enfoca en el estudio de la interacción de los editores de un artículo mediante visualizaciones de redes \cite{Suh07}, \cite{Kee12}, mientras que el segundo se centra en el estudio de la evolución de las propiedades de los artículos mediante su visualización en series temporales \cite{Vie04}, \cite{Wat07}, \cite{Nun08}. Estos trabajos han permitido analizar la dinámica y coordinación de los editores, como también la detección de patrones de actividad, conflicto y vandalismo. En general, han permitido alcanzar conclusiones importantes sobre el comportamiento de la comunidad colaborativa de Wikipedia.
 
-Otro grupo de trabajos realizó aplicaciones web cuya finalidad es monitorear el estatus del historial de un artículo.  Entre esos están el WikiDashboard \cite{Suh2008a} y una herramienta estadística integrada en Wikipedia \cite{Akawikipedia.orga}. A diferencia de las aplicaciones anteriores, que se enfocan en generar visualizaciones exploratorias de todo el historial, este grupo de aplicaciones se centró en crear un monitor de estatus de actividades recientes que mantuviera actualizados a los usuarios con el fin de mejorar la transparencia y responsabilidad social en artículos de Wikipedia. Ello se logra a través de visualizaciones que dan múltiples representaciones (líneas de tiempo, cromograma, listas de usuario, etc.) de la información reciente de manera resumida.
+Otro grupo de trabajos elaboró aplicaciones web cuya finalidad es monitorear el estatus del historial de un artículo. Entre esos están el WikiDashboard \cite{Suh08} y una herramienta estadística integrada en Wikipedia \cite{Aka}. A diferencia de las aplicaciones anteriores, que se enfocan en generar visualizaciones exploratorias de todo el historial, este grupo de aplicaciones se centró en crear un monitor de actividades recientes que mantuviera actualizados a los usuarios con el fin de mejorar la transparencia y responsabilidad social en artículos de Wikipedia. Ello se logra a través de visualizaciones que dan múltiples representaciones (líneas de tiempo, cromograma, listas de usuario, etc.) de la información reciente de manera resumida.
 
 \section{History Flow}
-Una de las primeras visualizaciones de historiales de Wikipedia fue History Flow \cite{Viegas2004a}, que plantea una herramienta de análisis exploratorio de datos efectiva para revelar patrones sobre el comportamiento de una comunidad colaborativa como Wikipedia. El objetivo de History Flow es garantizar la visualización inmediata de tendencias generales del historial de revisiones preservando los detalles para una exploración más minuciosa.
+Una de las primeras visualizaciones de historiales de Wikipedia fue History Flow \cite{Vie04}, que plantea una herramienta de análisis exploratorio de datos efectiva para revelar patrones sobre el comportamiento de una comunidad colaborativa como Wikipedia. El objetivo de History Flow es garantizar la visualización inmediata de tendencias generales del historial de revisiones preservando los detalles para una exploración más minuciosa.
 
 Para explicar el método, se plantea el siguiente escenario. Tres autores (María, Susana y Andrés) colaboran en la redacción de un artículo. A cada colaborador se le asigna un color que lo va a representar en la visualización. En primer lugar, María crea el documento y añade una cantidad de texto. Esta versión es reflejada como una “línea de versión” vertical, de color negro y con una longitud proporcional a la longitud del texto (Fig. \ref{fig1}a). En la siguiente versión, Susana agrega texto al final del documento sin modificar lo hecho por María. La línea de versión ahora mostrará una sección de color blanco (correspondiente a Susana) debajo de la sección de María. De esta forma, la línea de revisión aumenta su longitud en esta versión para reflejar el crecimiento del documento.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig1.png}
-  \caption{Explicación del mecanismo de visualización History Flow}
+  \caption{Explicación del mecanismo de visualización History Flow. \cite{Vie04}, Fig. 2}
   \label{fig1}
 \end{figure}
 
@@ -28,14 +28,14 @@ Con el fin de observar las relaciones entre las diferentes versiones, el diagram
 Una variante del History Flow emplea el espacio entre las líneas de revisión para reflejar el paso del tiempo. De esta forma, en lugar de utilizar el mismo espaciado entre líneas de revisión (Fig. \ref{fig1}b) se coloca un espaciado proporcional a la diferencia entre fechas de revisiones sucesivas (Fig. \ref{fig1}c). Esta variante tiene el beneficio de revelar los ritmos de colaboración entre autores.
 
 \section{Chromogram}
-El Cromograma es una técnica de visualización empleada por Wattenberg y Viegas \cite{Wattenberg2007a} para investigar la distribución del tiempo de los participantes de la comunidad colaborativa de Wikipedia. Consiste esencialmente en una visualización exploratoria que hace una codificación cromática de largas secuencias textuales, produciendo una visualización densa en datos que puede contener la vasta historia de ediciones de un usuario en una pantalla. Esta visualización permitió la identificación de patrones de actividades reactivas y sistemáticas en la comunidad colaborativa de Wikipedia.
+El Cromograma es una técnica de visualización empleada por Wattenberg y Viegas \cite{Wat07} para investigar la distribución del tiempo de los participantes de la comunidad colaborativa de Wikipedia. Consiste esencialmente en una visualización exploratoria que hace una codificación cromática de largas secuencias textuales, produciendo una visualización densa en datos que puede contener la vasta historia de ediciones de un usuario en una pantalla. Esta visualización permitió la identificación de patrones de actividades reactivas y sistemáticas en la comunidad colaborativa de Wikipedia.
 
-El criterio de codificación toma las primeras tres letras para determinar el color de la representación. La primera letra determina el tono, la segunda la saturación y la tercera el brillo. Se restringe el rango de la saturación y el brillo de manera que el tono pueda percibirse fácilmente. Como caso especial, se codifican en escala de grises los títulos o comentarios que comienzan con un número.  La Fig. \ref{fig6} muestra ejemplos de esta codificación usando palabras comunes encontradas en los comentarios de los usuarios de Wikipedia.
+El criterio de codificación toma las primeras tres letras para determinar el color de la representación. La primera letra determina el tono, la segunda la saturación y la tercera el brillo. Se restringe el rango de la saturación y el brillo de manera que el tono pueda percibirse fácilmente. Como caso especial, se codifican en escala de grises los títulos o comentarios que comienzan con un número. La Fig. \ref{fig6} muestra ejemplos de esta codificación usando palabras comunes encontradas en los comentarios de los usuarios de Wikipedia.
 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig6.png}
-  \caption{Codificación de palabras a color}
+  \caption{Codificación de palabras a color \cite{Wat07}, Fig. 1}
   \label{fig6}
 \end{figure}
 
@@ -44,12 +44,12 @@ La técnica del Cromograma parte de esta codificación y permite visualizar una 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig7.png}
-  \caption{Creando un Cromograma}
+  \caption{Creando un Cromograma \cite{Wat07}, Fig. 2}
   \label{fig7}
 \end{figure}
 
 \section{WikiChanges}
-Es una aplicación web diseñada con la finalidad de estudiar la correlación entre la popularidad de un tema y el perfil de actualización. Esto se logra mediante una visualización que gráfica sobre una línea de tiempo el número de revisiones que sufre un artículo, acompañado de un resumen de revisiones que crea una nube términos que ayuda a determinar los eventos asociados a picos de actividad.
+Es una aplicación web diseñada con la finalidad de estudiar la correlación entre la popularidad de un tema y el perfil de actualización \cite{Nun08}. Esto se logra mediante una visualización que gráfica sobre una línea de tiempo el número de revisiones que sufre un artículo, acompañado de un resumen de revisiones que crea una nube términos que ayuda a determinar los eventos asociados a picos de actividad.
 
 Según el autor, el perfil de actualización es “la distribución de revisiones en el tiempo hecha sobre un artículo en un sistema de wiki”. Para construir el perfil de actualización de un artículo de Wikipedia, se extrae la fecha de cada revisión, se cuenta el número de revisiones por período (día, mes o año) y se produce una serie de tiempo.
 En la Figura \ref{fig10}, se muestra el perfil de actualización del artículo sobre Steve Fossett. Se puede observar un pico de actividad en Septiembre del 2007, fecha en la cual fue reportado desaparecido durante un vuelo, y luego otro en Febrero del 2008 cuando fue declarado muerto. Dado que en este caso se conocen de antemano los eventos asociados al artículo, es fácil predecir y entender los picos de actividad. Sin embargo, cuando estos eventos asociados no se conocen, la visualización por sí sola no permite descubrir las posibles causas de los picos de actividad. Como solución a esta limitante, se planteó la construcción automática de “resúmenes”.
@@ -59,13 +59,13 @@ Estos resúmenes se construyen para un período dado usando un enfoque basado en
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig10.png}
-  \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett}
+  \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett. \cite{Nun08}, Fig. 3}
   \label{fig10}
 \end{figure}
 
 \section{Revert Graph}
-En este trabajo se describió un modelo para identificar patrones de conflicto en artículos de Wikipedia. El modelo se basa en el historial de ediciones de usuarios y las relaciones entre sus ediciones, especialmente aquellas que eliminan ediciones previas; conocidas como “reversiones” o “reverts”. Basados en este modelo, se construyó Revert Graph, una herramienta que utiliza grafos de nodos para visualizar patrones de conflicto generales entre grupos de usuarios.
- 
+En este trabajo se describió un modelo para identificar patrones de conflicto en artículos de Wikipedia \cite{Suh07}. El modelo se basa en el historial de ediciones de usuarios y las relaciones entre sus ediciones, especialmente aquellas que eliminan ediciones previas; conocidas como “reversiones” o “reverts”. Basados en este modelo, se construyó Revert Graph, una herramienta que utiliza grafos de nodos para visualizar patrones de conflicto generales entre grupos de usuarios.
+
 Se plantean dos métodos para identificar “reversiones” en Wikipedia. El primero se basa en calcular un identificador único para cada revisión en un artículo usando un esquema de hashing MD5. Se usa la función de MD5 para generar una pequeña huella digital de cada revisión, la cual permite una rápida comparación entre todos los artículos. El segundo método permite capturar las “reversiones” parciales usando las etiquetas “revert” y “rv” en los comentarios del editor en cada revisión.
 
 Inicialmente, la herramienta carga un grupo de usuarios participando en la edición de un artículo como un grafo de nodos uniformemente distribuido. La simulación ejecuta un algoritmo de disposición que simula la dinámica social que resulta del modelo de conflicto de usuarios. Este algoritmo asigna fuerzas tal que los bordes (que representan relaciones de reversión) funcionan como resortes, mientras que los usuarios son representados como partículas con campos gravitacionales. A medida que la simulación progresa, las fuerzas del grafo se estabilizan y las estructuras sociales entre usuarios empiezan a emerger, como se muestra en la Figura \ref{fig11}. El tamaño del nodo es proporcional al número de reversiones o revisiones. Los nodos son codificados con color basándose en el estatus de registro de los usuarios. Un administrador se colorea como un nodo verde, un usuario registrado normal como uno gris y uno no registrado como uno blanco.
@@ -73,12 +73,12 @@ Inicialmente, la herramienta carga un grupo de usuarios participando en la edici
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig11.png}
-  \caption{Visualización Revert Graph del artículo de Charles Darwin}
+  \caption{Visualización Revert Graph del artículo de Charles Darwin. \cite{Suh07}, Fig. 1}
   \label{fig11}
 \end{figure}
 
 \section{Estructuras y Dinámicas de las Colaboraciones en Wikipedia en Eventos Recientes}
-Este trabajo estudia la dinámica de coordinación de los editores de Wikipedia sobre dos categorías de artículos: aquellos sobre eventos recientes y aquellos que son enciclopédicos. Los resultados mostraron que las estructuras y dinámicas son distintas entre artículos para estas dos categorías y que tienen implicaciones en cómo los sistemas de inteligencia colectiva pueden apalancarse para procesar y dar sentido a información compleja.
+Este trabajo estudia la dinámica de coordinación de los editores de Wikipedia sobre dos categorías de artículos: aquellos sobre eventos recientes y aquellos que son enciclopédicos \cite{Kee12}. Los resultados mostraron que las estructuras y dinámicas son distintas entre artículos para estas dos categorías y que tienen implicaciones en cómo los sistemas de inteligencia colectiva pueden apalancarse para procesar y dar sentido a información compleja.
 
 La visualización emplea una perspectiva de análisis de red. Este enfoque se basa en la construcción de una “trayectoria de artículo”, que es la secuencia temporal de las revisiones contenidas en el historial. Los nodos en la trayectoria son los autores, mientras que las conexiones entre nodos representan las revisiones que transicionan el artículo de la revisión de un autor a la del siguiente. Un lazo ocurre cuando un solo editor guarda múltiples revisiones a lo largo del historial de un artículo (Fig.\ref{fig12}). Una cadena aparece cuando editores subsecuentes hacen revisiones únicas sin contribuir nuevamente en el artículo (Fig. \ref{fig13}). En general, esta técnica captura una vista estructural de la historia de revisiones que permite visualizar y analizar relaciones complejas entre editores y las versiones de un artículo.
 
@@ -99,9 +99,9 @@ La visualización emplea una perspectiva de análisis de red. Este enfoque se ba
 \end{figure}
 
 \section{Visualización de Propiedades de Historiales de Artículos de Wikis Mediante un Enfoque de Ingeniería Dirigida por Modelos}
-En el trabajo de Scalise se describe un enfoque dirigido por modelos para el procesamiento del historial de los artículos de un sistema Wiki basado en MediaWiki \cite{Scalise2008a}. En él se describe cómo se pueden calcular propiedades alternas a las disponibles, así como la generación de reportes y visualizaciones gráficas de la información. El proceso se compone de cuatro fases.
+En el trabajo de Scalise se describe un enfoque dirigido por modelos para el procesamiento del historial de los artículos de un sistema Wiki basado en MediaWiki \cite{Sca08}. En él se describe cómo se pueden calcular propiedades alternas a las disponibles, así como la generación de reportes y visualizaciones gráficas de la información. El proceso se compone de cuatro fases.
 
-En la primera se define un metamodelo del dominio. En la segunda fase se genera un mecanismo para convertir los historiales en un modelo conforme con el metamodelo definido. En la tercera fase se hace uso del modelo para desarrollar transformaciones que  calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
+En la primera se define un metamodelo del dominio. En la segunda fase se genera un mecanismo para convertir los historiales en un modelo conforme con el metamodelo definido. En la tercera fase se hace uso del modelo para desarrollar transformaciones que calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
 
 En la cuarta fase se generan reportes o representaciones gráficas con las propiedades (métricas) calculadas. En el trabajo se hacen las siguientes recomendaciones en ese sentido:
 
@@ -116,7 +116,8 @@ En el ámbito de las propiedades específicas, se desarrolló una adaptación de
 
 El trabajo concluye que la propuesta planteada permite recuperar información del web siguiendo un enfoque flexible, que disminuye las dependencias de los programas con respecto a los aspectos de formato y separa el cálculo de las propiedades de su posterior visualización, lo cual trae el beneficio de permitir que una misma propiedad pueda ser visualizada de diferentes formas.
 
-\section{Métodos y Técnicas para el Cálculo y Visualización de Métricas de Historiales de Artículos Wiki} En su trabajo, D’Apuzzo y Worwa implementan una aplicación (Web Scraper) que permite la recuperación del historial de los artículos de cualquier Wiki basado en MediaWiki, para luego calcular métricas y propiedades de interés asociadas a dicha información. El trabajo halla su motivación en la carencia de herramientas gráficas para el análisis y visualización de propiedades de los historiales que permitan observar su evolución en el tiempo.  Un Web Scraper es un programa automatizado que se encarga de visitar de manera sistematizada un conjunto de URLs con el fin de obtener información y/o realizar actividades de rutina o mantenimiento (12). En este caso, se implementó un Web Scraper para la extracción de historiales de sistemas basados en MediaWiki con las siguientes políticas de selección, revisita y cortesía:
+\section{Métodos y Técnicas para el Cálculo y Visualización de Métricas de Historiales de Artículos Wiki}
+En su trabajo, D’Apuzzo y Worwa implementan una aplicación (Web Scraper) que permite la recuperación del historial de los artículos de cualquier Wiki basado en MediaWiki, para luego calcular métricas y propiedades de interés asociadas a dicha información \cite{Dap12}. El trabajo halla su motivación en la carencia de herramientas gráficas para el análisis y visualización de propiedades de los historiales que permitan observar su evolución en el tiempo. Un Web Scraper es un programa automatizado que se encarga de visitar de manera sistematizada un conjunto de URLs con el fin de obtener información y/o realizar actividades de rutina o mantenimiento. En este caso, se implementó un Web Scraper para la extracción de historiales de sistemas basados en MediaWiki con las siguientes políticas de selección, revisita y cortesía:
 
 \begin{description}
   \item[Selección:] las URL a visitar son provistas por el usuario final; una a la vez, o por lote mediante un archivo de texto en el cual se especifica una URL por línea. Las URL suministradas son sometidas a un proceso de normalización.
@@ -133,11 +134,10 @@ Como se muestra en la Figura \ref{fig16}, la arquitectura del Web Scraper incluy
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig16.png}
-  \caption{Arquitectura del sistema WikiMetrics-UCV}
+  \caption{Arquitectura del sistema WikiMetrics-UCV \cite{Dap12}, Fig. 3.1}
   \label{fig16}
 \end{figure}
 
 El funcionamiento del Web Scraper sucede de la siguiente manera. Dado el pool de semillas almacenadas en la base de datos por la herramienta de URLs, el Web Scraper selecciona la URL a visitar y se descarga el documento HTML. El documento pasa por un proceso de análisis sintáctico mediante el cual se extrae toda la información especificada por el usuario usando expresiones XPath. Está información es luego normalizada y almacenada en la base de datos.
 
 La aplicación se implementó en lenguaje Python en combinación con una base de datos NoSQL manejada con MongoDB. Dicho proyecto se encuentra hospedado en la siguiente dirección de GitHub \url{https://github.com/bworwa/wiki_metrics_ucv}.
-
