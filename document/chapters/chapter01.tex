@@ -157,14 +157,18 @@ En el ámbito de las propiedades específicas, se desarrolló una adaptación de
 El trabajo concluye que la propuesta planteada permite recuperar información del web siguiendo un enfoque flexible, que disminuye las dependencias de los programas con respecto a los aspectos de formato y separa el cálculo de las propiedades de su posterior visualización, lo cual trae el beneficio de permitir que una misma propiedad pueda ser visualizada de diferentes formas.
 
 \section{Métodos y Técnicas para el Cálculo y Visualización de Métricas de Historiales de Artículos Wiki}
-En su trabajo, D’Apuzzo y Worwa implementan una aplicación (Web Scraper) que permite la recuperación del historial de los artículos de cualquier Wiki basado en MediaWiki, para luego calcular métricas y propiedades de interés asociadas a dicha información \cite{Dap12}. El trabajo halla su motivación en la carencia de herramientas gráficas para el análisis y visualización de propiedades de los historiales que permitan observar su evolución en el tiempo. Un Web Scraper es un programa automatizado que se encarga de visitar de manera sistematizada un conjunto de URLs con el fin de obtener información y/o realizar actividades de rutina o mantenimiento. En este caso, se implementó un Web Scraper para la extracción de historiales de sistemas basados en MediaWiki con las siguientes políticas de selección, revisita y cortesía:
+En su trabajo, D’Apuzzo y Worwa implementan una aplicación (Web Scraper) que permite la recuperación del historial de los artículos de cualquier Wiki basado en MediaWiki, para luego calcular métricas y propiedades de interés asociadas a dicha información \cite{Dap12}. El trabajo halla su motivación en la carencia de herramientas gráficas para el análisis y visualización de propiedades de los historiales que permitan observar su evolución en el tiempo.
+
+Un Web Scraper es un programa automatizado que se encarga de visitar de manera sistematizada un conjunto de URLs con el fin de obtener información y/o realizar actividades de rutina o mantenimiento. En este caso, se implementó un Web Scraper para la extracción de historiales de sistemas basados en MediaWiki con las siguientes políticas de selección, revisita y cortesía:
 
 \begin{description}
   \item[Selección:] las URL a visitar son provistas por el usuario final; una a la vez, o por lote mediante un archivo de texto en el cual se especifica una URL por línea. Las URL suministradas son sometidas a un proceso de normalización.
   \item[Revisita:] la política de revisita se basa en un sistema de prioridades. Una URL recién almacenada tiene una prioridad de 0.5. Luego de visitada y de haber extraído la información, la prioridad se actualiza con el valor 0. Esta probabilidad irá aumentando en el tiempo de acuerdo a la formula:
+
 \begin{equation}
   1-\frac{T_{0}}{T_{i}}
 \end{equation}
+
 donde To es la marca de tiempo (timestamp) de la última fecha de actualización de la URL (por defecto 0) y Ti es la marca de tiempo del momento en que se está calculando la prioridad de revisita.
   \item[Cortesía:] Se espera un tiempo mínimo de 10 segundos entre peticiones al servidor.
 \end{description}
