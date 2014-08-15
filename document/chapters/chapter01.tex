@@ -79,14 +79,14 @@ Es una aplicación web diseñada con la finalidad de estudiar la correlación en
 Según el autor, el perfil de actualización es “la distribución de revisiones en el tiempo hecha sobre un artículo en un sistema de wiki”. Para construir el perfil de actualización de un artículo de Wikipedia, se extrae la fecha de cada revisión, se cuenta el número de revisiones por período (día, mes o año) y se produce una serie de tiempo.
 En la Figura \ref{fig10}, se muestra el perfil de actualización del artículo sobre Steve Fossett. Se puede observar un pico de actividad en Septiembre del 2007, fecha en la cual fue reportado desaparecido durante un vuelo, y luego otro en Febrero del 2008 cuando fue declarado muerto. Dado que en este caso se conocen de antemano los eventos asociados al artículo, es fácil predecir y entender los picos de actividad. Sin embargo, cuando estos eventos asociados no se conocen, la visualización por sí sola no permite descubrir las posibles causas de los picos de actividad. Como solución a esta limitante, se planteó la construcción automática de “resúmenes”.
 
-Estos resúmenes se construyen para un período dado usando un enfoque basado en los términos insertados entre revisiones. Sólo se considera la versión más antigua y la más reciente del documento analizado en el período definido. De cada versión se prepara un conjunto de términos acompañados de su frecuencia. Los términos pueden ser una palabra (unigrams) o  la ocurrencia de dos palabras consecutivas (bigrams). Sustrayendo la frecuencia de los términos en la versión más antigua de la más reciente obtenemos el conjunto que formará la nube de términos para el período determinado. Cada término es ponderado usando su frecuencia resultante, como se muestra en la Fig. \ref{fig10}.
-
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig10.png}
   \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett. \cite[Fig. 3]{Nun08}}
   \label{fig10}
 \end{figure}
+
+Estos resúmenes se construyen para un período dado usando un enfoque basado en los términos insertados entre revisiones. Sólo se considera la versión más antigua y la más reciente del documento analizado en el período definido. De cada versión se prepara un conjunto de términos acompañados de su frecuencia. Los términos pueden ser una palabra (unigrams) o  la ocurrencia de dos palabras consecutivas (bigrams). Sustrayendo la frecuencia de los términos en la versión más antigua de la más reciente obtenemos el conjunto que formará la nube de términos para el período determinado. Cada término es ponderado usando su frecuencia resultante, como se muestra en la Fig. \ref{fig10}.
 
 \section{Revert Graph}
 En este trabajo se describió un modelo para identificar patrones de conflicto en artículos de Wikipedia \cite{Suh07}. El modelo se basa en el historial de ediciones de usuarios y las relaciones entre sus ediciones, especialmente aquellas que eliminan ediciones previas; conocidas como “reversiones” o “reverts”. Basados en este modelo, se construyó Revert Graph, una herramienta que utiliza grafos de nodos para visualizar patrones de conflicto generales entre grupos de usuarios.
