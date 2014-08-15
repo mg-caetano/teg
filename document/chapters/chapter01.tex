@@ -17,7 +17,7 @@ Para explicar el método, se plantea el siguiente escenario. Tres autores (Marí
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig1.png}
-  \caption{Explicación del mecanismo de visualización History Flow. \cite{Vie04}, Fig. 2}
+  \caption{Explicación del mecanismo de visualización History Flow. \cite[Fig. 2]{Vie04}}
   \label{fig1}
 \end{figure}
 
@@ -35,7 +35,7 @@ El criterio de codificación toma las primeras tres letras para determinar el co
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig6.png}
-  \caption{Codificación de palabras a color \cite{Wat07}, Fig. 1}
+  \caption{Codificación de palabras a color \cite[Fig. 1]{Wat07}}
   \label{fig6}
 \end{figure}
 
@@ -44,7 +44,7 @@ La técnica del Cromograma parte de esta codificación y permite visualizar una 
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig7.png}
-  \caption{Creando un Cromograma \cite{Wat07}, Fig. 2}
+  \caption{Creando un Cromograma \cite[Fig. 2]{Wat07}}
   \label{fig7}
 \end{figure}
 
@@ -59,7 +59,7 @@ Estos resúmenes se construyen para un período dado usando un enfoque basado en
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig10.png}
-  \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett. \cite{Nun08}, Fig. 3}
+  \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett. \cite[Fig. 3]{Nun08}}
   \label{fig10}
 \end{figure}
 
@@ -73,29 +73,30 @@ Inicialmente, la herramienta carga un grupo de usuarios participando en la edici
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig11.png}
-  \caption{Visualización Revert Graph del artículo de Charles Darwin. \cite{Suh07}, Fig. 1}
+  \caption{Visualización Revert Graph del artículo de Charles Darwin. \cite[Fig. 1]{Suh07}}
   \label{fig11}
 \end{figure}
 
 \section{Estructuras y Dinámicas de las Colaboraciones en Wikipedia en Eventos Recientes}
-Este trabajo estudia la dinámica de coordinación de los editores de Wikipedia sobre dos categorías de artículos: aquellos sobre eventos recientes y aquellos que son enciclopédicos \cite{Kee12}. Los resultados mostraron que las estructuras y dinámicas son distintas entre artículos para estas dos categorías y que tienen implicaciones en cómo los sistemas de inteligencia colectiva pueden apalancarse para procesar y dar sentido a información compleja.
+Este trabajo estudia la dinámica de coordinación de los editores de Wikipedia sobre dos categorías de artículos: aquellos sobre eventos recientes y aquellos sobre acontecimientos históricos \cite{Kee12}. Los resultados mostraron que las estructuras y dinámicas son distintas entre artículos para estas dos categorías y que tienen implicaciones en cómo los sistemas de inteligencia colectiva pueden apalancarse para procesar y dar sentido a información compleja.
 
-La visualización emplea una perspectiva de análisis de red. Este enfoque se basa en la construcción de una “trayectoria de artículo”, que es la secuencia temporal de las revisiones contenidas en el historial. Los nodos en la trayectoria son los autores, mientras que las conexiones entre nodos representan las revisiones que transicionan el artículo de la revisión de un autor a la del siguiente. Un lazo ocurre cuando un solo editor guarda múltiples revisiones a lo largo del historial de un artículo (Fig.\ref{fig12}). Una cadena aparece cuando editores subsecuentes hacen revisiones únicas sin contribuir nuevamente en el artículo (Fig. \ref{fig13}). En general, esta técnica captura una vista estructural de la historia de revisiones que permite visualizar y analizar relaciones complejas entre editores y las versiones de un artículo.
+La visualización empleada en este estudio usa una perspectiva de análisis de red. Este enfoque se basa en la construcción de una “trayectoria de artículo”, que es la secuencia temporal de las revisiones contenidas en el historial. Los nodos en la trayectoria son los autores, mientras que las conexiones entre nodos representan las revisiones que transicionan el artículo de la revisión de un autor a la del siguiente. Un lazo ocurre cuando un solo editor guarda múltiples revisiones a lo largo del historial de un artículo (Fig.\ref{fig12}). Una cadena aparece cuando editores subsecuentes hacen revisiones únicas sin contribuir nuevamente en el artículo (Fig. \ref{fig13}). En general, esta técnica captura una vista estructural de la historia de revisiones que permite visualizar y analizar relaciones complejas entre editores y las versiones de un artículo.
 
-\begin{figure}
+\begin{figure}[ht]
   \begin{subfigure}[b]{0.5\textwidth}
     \centering
     \includegraphics[width=0.75\textwidth]{fig12.png}
-    \caption{Visualización de lazo}
+    \caption{Adam Air Vuelo 574 (Artículo de última hora)\cite[Fig. 2a]{Kee12}}
     \label{fig12}
   \end{subfigure}
   \hfill
   \begin{subfigure}[b]{0.45\textwidth}
     \centering
     \includegraphics[width=0.75\textwidth]{fig13.png}
-    \caption{Visualización de cadena}
+    \caption{Lufthansa Vuelo 2904 (Artículo sobre acontecimiento histórico)\cite[Fig. 2d]{Kee12}}
     \label{fig13}
   \end{subfigure}
+  \caption{Visualizaciones de dos artículos tomados de la lista de accidentes de aviones comerciales de Wikipedia}
 \end{figure}
 
 \section{Visualización de Propiedades de Historiales de Artículos de Wikis Mediante un Enfoque de Ingeniería Dirigida por Modelos}
@@ -134,7 +135,7 @@ Como se muestra en la Figura \ref{fig16}, la arquitectura del Web Scraper incluy
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig16.png}
-  \caption{Arquitectura del sistema WikiMetrics-UCV \cite{Dap12}, Fig. 3.1}
+  \caption{Arquitectura del sistema WikiMetrics-UCV \cite[Fig. 3.1]{Dap12}}
   \label{fig16}
 \end{figure}
 
