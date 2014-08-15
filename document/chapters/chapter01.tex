@@ -10,7 +10,14 @@ La literatura sobre visualizaciones de historiales de Wikipedia contiene en gene
 Otro grupo de trabajos elaboró aplicaciones web cuya finalidad es monitorear el estatus del historial de un artículo. Entre esos están el WikiDashboard \cite{Suh08} y una herramienta estadística integrada en Wikipedia \cite{Aka}. A diferencia de las aplicaciones anteriores, que se enfocan en generar visualizaciones exploratorias de todo el historial, este grupo de aplicaciones se centró en crear un monitor de actividades recientes que mantuviera actualizados a los usuarios con el fin de mejorar la transparencia y responsabilidad social en artículos de Wikipedia. Ello se logra a través de visualizaciones que dan múltiples representaciones (líneas de tiempo, cromograma, listas de usuario, etc.) de la información reciente de manera resumida.
 
 \section{History Flow}
-Una de las primeras visualizaciones de historiales de Wikipedia fue History Flow \cite{Vie04}, que plantea una herramienta de análisis exploratorio de datos efectiva para revelar patrones sobre el comportamiento de una comunidad colaborativa como Wikipedia. El objetivo de History Flow es garantizar la visualización inmediata de tendencias generales del historial de revisiones preservando los detalles para una exploración más minuciosa.
+Una de las primeras visualizaciones de historiales de Wikipedia fue History Flow \cite{Vie04}, que plantea una herramienta de análisis exploratorio de datos efectiva para revelar patrones sobre el comportamiento de una comunidad colaborativa como Wikipedia (Ver fig. \ref{fig2}. El objetivo de History Flow es garantizar la visualización inmediata de tendencias generales del historial de revisiones preservando los detalles para una exploración más minuciosa.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\textwidth]{fig2.png}
+  \caption{Interfaz de usuario de la herramienta History Flow explorando el artículo de Microsoft en Wikipedia. A la derecha se observa el contenido de la página, a la izquierda se despliega la lista de editores del artículo y en el panel central se muestra la visualización. \cite[Fig. 3]{Vie04}}
+  \label{fig2}
+\end{figure}
 
 Para explicar el método, se plantea el siguiente escenario. Tres autores (María, Susana y Andrés) colaboran en la redacción de un artículo. A cada colaborador se le asigna un color que lo va a representar en la visualización. En primer lugar, María crea el documento y añade una cantidad de texto. Esta versión es reflejada como una “línea de versión” vertical, de color negro y con una longitud proporcional a la longitud del texto (Fig. \ref{fig1}a). En la siguiente versión, Susana agrega texto al final del documento sin modificar lo hecho por María. La línea de versión ahora mostrará una sección de color blanco (correspondiente a Susana) debajo de la sección de María. De esta forma, la línea de revisión aumenta su longitud en esta versión para reflejar el crecimiento del documento.
 
@@ -28,7 +35,25 @@ Con el fin de observar las relaciones entre las diferentes versiones, el diagram
 Una variante del History Flow emplea el espacio entre las líneas de revisión para reflejar el paso del tiempo. De esta forma, en lugar de utilizar el mismo espaciado entre líneas de revisión (Fig. \ref{fig1}b) se coloca un espaciado proporcional a la diferencia entre fechas de revisiones sucesivas (Fig. \ref{fig1}c). Esta variante tiene el beneficio de revelar los ritmos de colaboración entre autores.
 
 \section{Chromogram}
-El Cromograma es una técnica de visualización empleada por Wattenberg y Viegas \cite{Wat07} para investigar la distribución del tiempo de los participantes de la comunidad colaborativa de Wikipedia. Consiste esencialmente en una visualización exploratoria que hace una codificación cromática de largas secuencias textuales, produciendo una visualización densa en datos que puede contener la vasta historia de ediciones de un usuario en una pantalla. Esta visualización permitió la identificación de patrones de actividades reactivas y sistemáticas en la comunidad colaborativa de Wikipedia.
+El Cromograma es una técnica de visualización empleada por Wattenberg y Viegas \cite{Wat07} para investigar la distribución del tiempo de los participantes de la comunidad colaborativa de Wikipedia. Consiste esencialmente en una visualización exploratoria que hace una codificación cromática de largas secuencias textuales, produciendo una visualización densa en datos que puede contener la vasta historia de ediciones de un usuario en una pantalla (Ver Fig. \ref{fig8-9}). Esta visualización permitió la identificación de patrones de actividades reactivas y sistemáticas en la comunidad colaborativa de Wikipedia.
+
+\begin{figure}[ht]
+  \begin{subfigure}[b]{0.5\textwidth}
+    \centering
+    \includegraphics[width=0.75\textwidth]{fig8.png}
+    \caption{Vista de bloque\cite[Fig. 3]{Wat07}}
+    \label{fig8}
+  \end{subfigure}
+  \hfill
+  \begin{subfigure}[b]{0.45\textwidth}
+    \centering
+    \includegraphics[width=0.75\textwidth]{fig9.png}
+    \caption{Vista en línea de tiempo\cite[Fig. 4]{Wat07}}
+    \label{fig9}
+  \end{subfigure}
+  \caption{La aplicación Chromogram. Exploración de los cromogramas de los 509 administradores de Wikipedia para el momento del estudio}
+  \label{fig8-9}
+\end{figure}
 
 El criterio de codificación toma las primeras tres letras para determinar el color de la representación. La primera letra determina el tono, la segunda la saturación y la tercera el brillo. Se restringe el rango de la saturación y el brillo de manera que el tono pueda percibirse fácilmente. Como caso especial, se codifican en escala de grises los títulos o comentarios que comienzan con un número. La Fig. \ref{fig6} muestra ejemplos de esta codificación usando palabras comunes encontradas en los comentarios de los usuarios de Wikipedia.
 
@@ -73,7 +98,7 @@ Inicialmente, la herramienta carga un grupo de usuarios participando en la edici
 \begin{figure}[ht]
   \centering
   \includegraphics[width=0.75\textwidth]{fig11.png}
-  \caption{Visualización Revert Graph del artículo de Charles Darwin. \cite[Fig. 1]{Suh07}}
+  \caption{Visualización Revert Graph del artículo de Charles Darwin \cite[Fig. 1]{Suh07}}
   \label{fig11}
 \end{figure}
 
@@ -102,7 +127,14 @@ La visualización empleada en este estudio usa una perspectiva de análisis de r
 \section{Visualización de Propiedades de Historiales de Artículos de Wikis Mediante un Enfoque de Ingeniería Dirigida por Modelos}
 En el trabajo de Scalise se describe un enfoque dirigido por modelos para el procesamiento del historial de los artículos de un sistema Wiki basado en MediaWiki \cite{Sca08}. En él se describe cómo se pueden calcular propiedades alternas a las disponibles, así como la generación de reportes y visualizaciones gráficas de la información. El proceso se compone de cuatro fases.
 
-En la primera se define un metamodelo del dominio. En la segunda fase se genera un mecanismo para convertir los historiales en un modelo conforme con el metamodelo definido. En la tercera fase se hace uso del modelo para desarrollar transformaciones que calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
+En la primera se define un metamodelo del dominio \ref{fig14}. En la segunda fase se genera un mecanismo para convertir los historiales en un modelo conforme con el metamodelo definido. En la tercera fase se hace uso del modelo para desarrollar transformaciones que calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\textwidth]{fig14.png}
+  \caption{Metamodelo de implementación de los artículos de un Wiki y su historial \cite[Fig. 2]{Sca08}}
+  \label{fig14}
+\end{figure}
 
 En la cuarta fase se generan reportes o representaciones gráficas con las propiedades (métricas) calculadas. En el trabajo se hacen las siguientes recomendaciones en ese sentido:
 
@@ -113,7 +145,14 @@ En la cuarta fase se generan reportes o representaciones gráficas con las propi
 
 Para la visualización de propiedades generales y con clasificador, se siguió un enfoque en el cual se escoge el metamodelo de visualización apropiado y luego se escribe la transformación para generar la instancia con los datos del historial del wiki. Por último se importan los resultados hacia cualquier herramienta de visualización utilizando una transformación.
 
-En el ámbito de las propiedades específicas, se desarrolló una adaptación del gráfico History Flow, denominada History Graph. La estrategia usada para implementar esta visualización fue definir el metamodelo, como se muestra en la figura de abajo, y luego escribir una transformación a partir de los datos traídos de MediaWiki. En general, las propiedades específicas no siguen ningún patrón. A causa de ello, es necesario definir un metamodelo particular para cada propiedad.
+En el ámbito de las propiedades específicas, se desarrolló una adaptación del gráfico History Flow, denominada History Graph. La estrategia usada para implementar esta visualización fue definir el metamodelo (Ver. fig. \ref{fig15}) y luego escribir una transformación a partir de los datos traídos de MediaWiki. En general, las propiedades específicas no siguen ningún patrón. A causa de ello, es necesario definir un metamodelo particular para cada propiedad.
+
+\begin{figure}[ht]
+  \centering
+  \includegraphics[width=0.75\textwidth]{fig15.png}
+  \caption{Metamodelo de History Graph y relación con una visualización \cite[Fig. 6]{Sca08}}
+  \label{fig15}
+\end{figure}
 
 El trabajo concluye que la propuesta planteada permite recuperar información del web siguiendo un enfoque flexible, que disminuye las dependencias de los programas con respecto a los aspectos de formato y separa el cálculo de las propiedades de su posterior visualización, lo cual trae el beneficio de permitir que una misma propiedad pueda ser visualizada de diferentes formas.
 
