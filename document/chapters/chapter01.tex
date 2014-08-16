@@ -12,7 +12,7 @@ Otro grupo de trabajos elaboró aplicaciones web cuya finalidad es monitorear el
 \section{History Flow}
 Una de las primeras visualizaciones de historiales de Wikipedia fue History Flow \cite{Vie04}, que plantea una herramienta de análisis exploratorio de datos efectiva para revelar patrones sobre el comportamiento de una comunidad colaborativa como Wikipedia (Ver fig. \ref{fig2}. El objetivo de History Flow es garantizar la visualización inmediata de tendencias generales del historial de revisiones preservando los detalles para una exploración más minuciosa.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig2.png}
   \caption{Interfaz de usuario de la herramienta History Flow explorando el artículo de Microsoft en Wikipedia. A la derecha se observa el contenido de la página, a la izquierda se despliega la lista de editores del artículo y en el panel central se muestra la visualización. \cite[Fig. 3]{Vie04}}
@@ -21,7 +21,7 @@ Una de las primeras visualizaciones de historiales de Wikipedia fue History Flow
 
 Para explicar el método, se plantea el siguiente escenario. Tres autores (María, Susana y Andrés) colaboran en la redacción de un artículo. A cada colaborador se le asigna un color que lo va a representar en la visualización. En primer lugar, María crea el documento y añade una cantidad de texto. Esta versión es reflejada como una “línea de versión” vertical, de color negro y con una longitud proporcional a la longitud del texto (Fig. \ref{fig1}a). En la siguiente versión, Susana agrega texto al final del documento sin modificar lo hecho por María. La línea de versión ahora mostrará una sección de color blanco (correspondiente a Susana) debajo de la sección de María. De esta forma, la línea de revisión aumenta su longitud en esta versión para reflejar el crecimiento del documento.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig1.png}
   \caption{Explicación del mecanismo de visualización History Flow. \cite[Fig. 2]{Vie04}}
@@ -37,7 +37,7 @@ Una variante del History Flow emplea el espacio entre las líneas de revisión p
 \section{Chromogram}
 El Cromograma es una técnica de visualización empleada por Wattenberg y Viegas \cite{Wat07} para investigar la distribución del tiempo de los participantes de la comunidad colaborativa de Wikipedia. Consiste esencialmente en una visualización exploratoria que hace una codificación cromática de largas secuencias textuales, produciendo una visualización densa en datos que puede contener la vasta historia de ediciones de un usuario en una pantalla (Ver Fig. \ref{fig8-9}). Esta visualización permitió la identificación de patrones de actividades reactivas y sistemáticas en la comunidad colaborativa de Wikipedia.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \begin{subfigure}[b]{0.5\textwidth}
     \centering
     \includegraphics[width=0.75\textwidth]{fig8.png}
@@ -57,7 +57,7 @@ El Cromograma es una técnica de visualización empleada por Wattenberg y Viegas
 
 El criterio de codificación toma las primeras tres letras para determinar el color de la representación. La primera letra determina el tono, la segunda la saturación y la tercera el brillo. Se restringe el rango de la saturación y el brillo de manera que el tono pueda percibirse fácilmente. Como caso especial, se codifican en escala de grises los títulos o comentarios que comienzan con un número. La Fig. \ref{fig6} muestra ejemplos de esta codificación usando palabras comunes encontradas en los comentarios de los usuarios de Wikipedia.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig6.png}
   \caption{Codificación de palabras a color \cite[Fig. 1]{Wat07}}
@@ -66,7 +66,7 @@ El criterio de codificación toma las primeras tres letras para determinar el co
 
 La técnica del Cromograma parte de esta codificación y permite visualizar una larga historia de revisión en una sola pantalla. Para explicarla, en primer lugar se muestra en la Fig. \ref{fig7}a una lista hipotética de revisiones. La visualización consiste entonces en tomar el texto del comentario de cada elemento de la lista, codificarlo y crear un histograma (Fig. \ref{fig7}b) donde cada fila corresponde a un día y contiene un rectángulo para cada revisión ordenada en el tiempo. La Fig. \ref{fig7}c muestra la variante de la visualización llamada “vista de bloque”, donde las revisiones se muestran de manera continua y consolidada ordenadas en el tiempo de izquierda a derecha y luego de arriba a abajo. Esta vista es más densa, pero oculta los ritmos temporales de las revisiones.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig7.png}
   \caption{Creando un Cromograma \cite[Fig. 2]{Wat07}}
@@ -79,7 +79,7 @@ Es una aplicación web diseñada con la finalidad de estudiar la correlación en
 Según el autor, el perfil de actualización es “la distribución de revisiones en el tiempo hecha sobre un artículo en un sistema de wiki”. Para construir el perfil de actualización de un artículo de Wikipedia, se extrae la fecha de cada revisión, se cuenta el número de revisiones por período (día, mes o año) y se produce una serie de tiempo.
 En la Figura \ref{fig10}, se muestra el perfil de actualización del artículo sobre Steve Fossett. Se puede observar un pico de actividad en Septiembre del 2007, fecha en la cual fue reportado desaparecido durante un vuelo, y luego otro en Febrero del 2008 cuando fue declarado muerto. Dado que en este caso se conocen de antemano los eventos asociados al artículo, es fácil predecir y entender los picos de actividad. Sin embargo, cuando estos eventos asociados no se conocen, la visualización por sí sola no permite descubrir las posibles causas de los picos de actividad. Como solución a esta limitante, se planteó la construcción automática de “resúmenes”.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig10.png}
   \caption{Sistema WikiChanges mostrando la historia de revisiones para el artículo de Steve Fossett. \cite[Fig. 3]{Nun08}}
@@ -95,7 +95,7 @@ Se plantean dos métodos para identificar “reversiones” en Wikipedia. El pri
 
 Inicialmente, la herramienta carga un grupo de usuarios participando en la edición de un artículo como un grafo de nodos uniformemente distribuido. La simulación ejecuta un algoritmo de disposición que simula la dinámica social que resulta del modelo de conflicto de usuarios. Este algoritmo asigna fuerzas tal que los bordes (que representan relaciones de reversión) funcionan como resortes, mientras que los usuarios son representados como partículas con campos gravitacionales. A medida que la simulación progresa, las fuerzas del grafo se estabilizan y las estructuras sociales entre usuarios empiezan a emerger, como se muestra en la Figura \ref{fig11}. El tamaño del nodo es proporcional al número de reversiones o revisiones. Los nodos son codificados con color basándose en el estatus de registro de los usuarios. Un administrador se colorea como un nodo verde, un usuario registrado normal como uno gris y uno no registrado como uno blanco.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig11.png}
   \caption{Visualización Revert Graph del artículo de Charles Darwin \cite[Fig. 1]{Suh07}}
@@ -107,7 +107,7 @@ Este trabajo estudia la dinámica de coordinación de los editores de Wikipedia 
 
 La visualización empleada en este estudio usa una perspectiva de análisis de red. Este enfoque se basa en la construcción de una “trayectoria de artículo”, que es la secuencia temporal de las revisiones contenidas en el historial. Los nodos en la trayectoria son los autores, mientras que las conexiones entre nodos representan las revisiones que transicionan el artículo de la revisión de un autor a la del siguiente. Un lazo ocurre cuando un solo editor guarda múltiples revisiones a lo largo del historial de un artículo (Fig.\ref{fig12}). Una cadena aparece cuando editores subsecuentes hacen revisiones únicas sin contribuir nuevamente en el artículo (Fig. \ref{fig13}). En general, esta técnica captura una vista estructural de la historia de revisiones que permite visualizar y analizar relaciones complejas entre editores y las versiones de un artículo.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \begin{subfigure}[b]{0.5\textwidth}
     \centering
     \includegraphics[width=0.75\textwidth]{fig12.png}
@@ -129,7 +129,7 @@ En el trabajo de Scalise se describe un enfoque dirigido por modelos para el pro
 
 En la primera se define un metamodelo del dominio \ref{fig14}. En la segunda fase se genera un mecanismo para convertir los historiales en un modelo conforme con el metamodelo definido. En la tercera fase se hace uso del modelo para desarrollar transformaciones que calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig14.png}
   \caption{Metamodelo de implementación de los artículos de un Wiki y su historial \cite[Fig. 2]{Sca08}}
@@ -147,7 +147,7 @@ Para la visualización de propiedades generales y con clasificador, se siguió u
 
 En el ámbito de las propiedades específicas, se desarrolló una adaptación del gráfico History Flow, denominada History Graph. La estrategia usada para implementar esta visualización fue definir el metamodelo (Ver. fig. \ref{fig15}) y luego escribir una transformación a partir de los datos traídos de MediaWiki. En general, las propiedades específicas no siguen ningún patrón. A causa de ello, es necesario definir un metamodelo particular para cada propiedad.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig15.png}
   \caption{Metamodelo de History Graph y relación con una visualización \cite[Fig. 6]{Sca08}}
@@ -175,7 +175,7 @@ donde To es la marca de tiempo (timestamp) de la última fecha de actualización
 
 Como se muestra en la Figura \ref{fig16}, la arquitectura del Web Scraper incluye dos módulos de soporte: una herramienta de URL y un demonio de prioridades. La herramienta de URL es una pequeña aplicación que recibe como parámetro una URL, la normaliza y la agrega al sistema. El demonio de prioridades se encarga de la actualización del valor de prioridad de las URL almacenadas en la base de datos usando la fórmula establecida en la política de revisita.
 
-\begin{figure}[ht]
+\begin{figure}[htp]
   \centering
   \includegraphics[width=0.75\textwidth]{fig16.png}
   \caption{Arquitectura del sistema WikiMetrics-UCV \cite[Fig. 3.1]{Dap12}}
