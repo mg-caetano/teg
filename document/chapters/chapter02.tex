@@ -107,7 +107,8 @@ Los datos son la materia prima de una visualización. Sin importar lo que se int
 \subsubsection{Usando el análisis visual para encontrar historias}
 El análisis visual de un conjunto de datos, mediante razonamiento inductivo y deductivo, permite al diseñador explorar los datos en todas las posibles direcciones. Haciendo uso de técnicas de visualización el diseñador puede familiarizarse íntimamente con los datos y comenzar a entender lo que se podría describir y cómo llevarlo cabo.
 
-Durante el proceso de análisis visual se debe estar preparado para observar un conjunto de características (cualidades físicas de los datos) que servirán de guía en la identificación de historias claves. Estas características se describen en la siguiente tabla.
+Durante el proceso de análisis visual se debe estar preparado para observar un conjunto de características (cualidades físicas de los datos) que servirán de guía en la identificación de historias claves. Estas características se describen en la tabla \ref{table:tb1}.
+
 \begin{longtable}[c]{|p{3cm}|p{2.5cm}|p{3cm}|p{6.5cm}|}
   \hline
   Grupo & Visualización sugerida & Característica & Acción \\ \hline
@@ -129,8 +130,8 @@ Durante el proceso de análisis visual se debe estar preparado para observar un 
   &   & Agrupaciones y vacíos & localizar los vacíos entre valores y las agrupaciones \\ \cline{3-4}
   &   & Relación jerárquica & determinar la composición, distribución y relevancia de las categorías de los datos \\ \cline{3-4}
   \hline
-  \caption{Clasificación de las cualidades físicas de los datos}
-  \label{tab1}
+  \caption[Clasificación de las cualidades físicas de los datos]{Clasificación de las cualidades físicas de los datos}
+  \label{table:tb1}
 \end{longtable}
 
 \subsection{FASE III: Diseño}
@@ -165,10 +166,14 @@ Ahora, el enfoque recae en encontrar el tipo de gráfico que se ajusta mejor a l
 
 La forma específica que se asigna a los datos para codificarlos visualmente se conoce como variables visuales. Una variable visual podría ser el largo o alto de una barra, la posición de un punto en el eje, el color de una ciudad en el mapa o la conexión entre dos nodos en una red. Los gráficos que conocemos como métodos de representación comunes se basan en el despliegue de una o combinaciones de varias variables visuales al mismo tiempo. Usar múltiples variables permite al diseñador expresar eficientemente capas extra de significado detrás de las propiedades de una sola marca. 
 
-%TO-DO: Revisar y agregar bibliografía
-Estudios como \cite{Cle84} y \cite{Mac86} han demostrado como la efectividad de distintas variables visuales pueden ser jerarquizadas en base a la precisión con la cual soportan comparación y percepción de patrones. En la siguiente imagen (Image recreated from "Ranking of Perceptual Tasks" (Automating the Design of Graphical Presentations of Relational Information, ACM Transactions on Graphics, Vol.5, No.2, April 1986) by Jock MacKinlay.) se expone dicha jerarquía.
+Estudios como \cite{Cle84} y \cite{Mac86} han demostrado como la efectividad de distintas variables visuales pueden ser jerarquizadas en base a la precisión con la cual soportan comparación y percepción de patrones. \Figlink{fig:fig17}{} se expone dicha jerarquía.
 
-%%TO-DO: Insertar imagen
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.95\textwidth]{fig17.png}
+  \caption[Ranking de las tareas perceptivas]{Imagen recreada a partir de 'Ranking of Perceptual Tasks' de Jock MacKinlay \cite{Vie04}.}
+  \label{fig:fig17}
+\end{figure}
 
 Estos estudios se enfocaron en el hecho de que nuestro sistema visual no es capaz de mediciones absolutas y por tanto, sólo se plantea una guía para entender cual variable va a ser mejor para entregar mediciones relativas con la mayor precisión.
 
