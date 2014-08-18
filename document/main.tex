@@ -16,6 +16,9 @@
 \usepackage{listings}
 \captionsetup[lstlisting]{font={small,tt}}
 \renewcommand{\floatpagefraction}{.8}
+\newcommand\figlink[2]{\hyperref[#1]{en la Figura~\ref*{#1}{#2}}}
+\newcommand\Figlink[2]{\hyperref[#1]{La Figura~\ref*{#1}{#2}}}
+\newcommand\Fig[2]{\hyperref[#1]{(Fig.~\ref*{#1}{#2})}}
 
 \lstset{
   basicstyle=\scriptsize,
