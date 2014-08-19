@@ -2,6 +2,7 @@
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
+%\usepackage[final]{microtype}
 \usepackage[letterpaper,width=170mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -12,9 +13,9 @@
 \addbibresource{references.bib}
 \usepackage{csquotes}
 \usepackage{multirow}
-%\usepackage{longtable}
 \usepackage{afterpage}
 \usepackage{pdflscape}
+\usepackage{appendix}
 \usepackage{listings}
 \captionsetup[lstlisting]{font={small,tt}}
 \captionsetup[table]{name=Tabla}
@@ -33,6 +34,7 @@
 
 \begin{document}
 
+% Front Matter
 \input{chapters/titlepage}
 
 \chapter*{Resumen}
@@ -40,6 +42,11 @@
 
 \tableofcontents
 
+\listoffigures
+
+\listoftables
+
+% Main Matter
 \chapter*{Introducción}
 \input{chapters/introduction}
 
@@ -58,6 +65,12 @@
 \chapter*{Conclusiones}
 \input{chapters/conclusion}
 
+% Appendix
+\appendix
+\chapter*{Apéndice}
+\input{chapters/appendix}
+
+% Back Matter
 \printbibliography
 
 \end{document}
