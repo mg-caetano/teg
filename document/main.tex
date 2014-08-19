@@ -2,7 +2,7 @@
 \usepackage[spanish]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
-%\usepackage[final]{microtype}
+\usepackage[final]{microtype}
 \usepackage[letterpaper,width=170mm,top=25mm,bottom=25mm,bindingoffset=6mm]{geometry}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
@@ -15,7 +15,9 @@
 \usepackage{multirow}
 \usepackage{afterpage}
 \usepackage{pdflscape}
-\usepackage{appendix}
+\usepackage[titletoc]{appendix}
+\renewcommand{\appendixtocname}{}
+\renewcommand{\appendixpagename}{Apéndice}
 \usepackage{listings}
 \captionsetup[lstlisting]{font={small,tt}}
 \captionsetup[table]{name=Tabla}
@@ -66,9 +68,12 @@
 \input{chapters/conclusion}
 
 % Appendix
-\appendix
-\chapter*{Apéndice}
-\input{chapters/appendix}
+\begin{appendices}
+  \appendixpage
+  \addappheadtotoc
+  \chapter*{Apéndice A}
+  \input{chapters/appendix}
+\end{appendices}
 
 % Back Matter
 \printbibliography
