@@ -15,9 +15,16 @@
 \usepackage{multirow}
 \usepackage{afterpage}
 \usepackage{pdflscape}
-\usepackage[titletoc]{appendix}
-\renewcommand{\appendixtocname}{}
+\usepackage[page, titletoc]{appendix}
+\renewcommand{\appendixname}{Apéndice}
+\renewcommand{\appendixtocname}{Apéndice}
 \renewcommand{\appendixpagename}{Apéndice}
+
+\usepackage{etoolbox} % utf8 encoding support for appendix
+\makeatletter
+\appto{\appendices}{\def\Hy@chapapp{Appendix}}
+\makeatother
+
 \usepackage{listings}
 \captionsetup[lstlisting]{font={small,tt}}
 \captionsetup[table]{name=Tabla}
@@ -69,9 +76,7 @@
 
 % Appendix
 \begin{appendices}
-  \appendixpage
-  \addappheadtotoc
-  \chapter*{Apéndice A}
+  \chapter{Taxonomía de los Métodos de Visualización de Datos}
   \input{chapters/appendix}
 \end{appendices}
 
