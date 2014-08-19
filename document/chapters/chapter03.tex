@@ -17,10 +17,9 @@ En este capítulo se presentan las más recientes especificaciones de las tecnol
 
 HTML es el lenguaje de marcado para definir la estructura de las páginas web \cite{HnC13}. Está compuesto por elementos que definen el tipo de contenido que va a ser desplegado por el navegador y son a su vez estructuras semánticas que describen la función de cada parte del documento sin ambigüedad \cite{Wp14}. El estándar HTML es mantenido por W3C (World Wide Web Consortium) \cite{MozHTML}.
 
-En un documento HTML un elemento se denota mediante un par de etiquetas, una inicial y otra final, como se muestra en la Figura \ref{sniphtml}. Un elemento puede contener otros elementos o texto. La información adicional asociada a un elemento se agrega mediante atributos colocados en la etiqueta inicial. En la Figura \ref{sniphtml} se muestra como se puede usar el atributo 'id' para proporcionar información semántica sobre el elemento.
+En un documento HTML un elemento se denota mediante un par de etiquetas, una inicial y otra final, como se muestra en el fragmento de código \ref{sniphtml}. Un elemento puede contener otros elementos o texto. La información adicional asociada a un elemento se agrega mediante atributos colocados en la etiqueta inicial. En el Algoritmo \ref{sniphtml} se muestra como se puede usar el atributo 'class' para proporcionar información semántica sobre el elemento.
 
-%TO-DO: Soporte de lenguajes html, css, javascript y svg
-\lstinputlisting[label=sniphtml,caption={Snippet de código HTML}]{snippets/snippet.html}
+\lstinputlisting[language=HTML,label=sniphtml,caption={Fragmento de código HTML \cite{HnC13}}]{snippets/snippet.html}
 
 HTML5 es la quinta revisión del estándar HTML. Esta especificación intenta resolver las fallas que las anteriores tenían en el área de las aplicaciones web, ofreciendo un lenguaje de marcado y un conjunto de scripting APIs enfocados en la semántica \cite{Html5}. En cuanto al lenguaje de marcado, se introduce una conjunto de elementos y atributos nuevos entre los cuales están \cite{Diff13}:
 
@@ -38,9 +37,9 @@ Según la W3C CSS es un "mecanismo sencillo para agregar estilo (tipografía, co
 
 Una de las grandes ventajas de CSS es que permite la separación de estructura (HTML) y presentación (CSS), y con ello se simplifica el mantenimiento de una página, se promueve la reutilización de hojas de estilo y la se facilita la adaptación de páginas a diferentes entornos \cite{HnC13}.
 
-La sintaxis de CSS posee dos bloques básicos de construcción: la propiedad, que es un identificador, y el valor, el cual describe como esta propiedad debe ser manejada por el motor del navegador. La funcionalidad principal de CSS es de establecer un valor específico a una propiedad. Un par propiedad-valor se denomina declaración. El par es separado por dos puntos. Las declaraciones son agrupadas en bloques delimitados por llaves, mejor llamados bloques de declaración. Cada bloque de declaración está precedido por un selector que es una condición que selecciona algunos elementos de la página. El par selector-bloque de declaración es lo que se conoce como regla \cite{MozCSS}.
+La sintaxis de CSS posee dos bloques básicos de construcción: la propiedad, que es un identificador, y el valor, el cual describe como esta propiedad debe ser manejada por el motor del navegador (ver Algoritmo \ref{snipcss}). La funcionalidad principal de CSS es de establecer un valor específico a una propiedad. Un par propiedad-valor se denomina declaración. El par es separado por dos puntos. Las declaraciones son agrupadas en bloques delimitados por llaves, mejor llamados bloques de declaración. Cada bloque de declaración está precedido por un selector que es una condición que selecciona algunos elementos de la página. El par selector-bloque de declaración es lo que se conoce como regla \cite{MozCSS}.
 
-\lstinputlisting[label=snipcss,caption={Snippet de código CSS}]{snippets/snippet.css}
+\lstinputlisting[label=snipcss,caption={Fragmento de código CSS \cite{Wp14}}]{snippets/snippet.css}
 
 Las hojas de estilo pueden declararse dentro de un elemento HTML, dentro de la sección 'head' de un documento HTML o en un archivo CSS externo. Para determinar qué estilo va a ser usado cuando hay más de un estilo declarado para un mismo elemento HTML, se sigue lo que se conoce como orden de escascadamiento. En él los estilos prevalecen según el siguiente orden de prioridad ascendente \cite{CssHT}:
 
@@ -55,11 +54,14 @@ CCS3 es la última revisión del lenguaje CSS y tiene como objetivo extender la 
 
 \subsection{DOM}
 
-%TO-DO:(## Revisar: http://www.w3.org/TR/REC-DOM-Level-1/introduction.html; http://www.w3schools.com/dom/dom_intro.asp)
+El modelo de objetos de documento (DOM) es una interfaz independiente de la plataforma y el lenguaje que permite a los programas y scripts el acceso dinámico y la actualización del contenido, estructura y estilo de documentos \cite{Rob98}. El DOM se crea al momento de cargar una página y es construido como un objeto con estructura de árbol \cite{JsHD}, como se muestra \figlink{fig:fig18}. El DOM provee una representación del documento como una estructura de nodos que posee propiedades, métodos y manejadores de eventos. El DOM esencialmente conecta la página web a los scripts o lenguajes de programación \cite{MozDOM}.
 
-El modelo de objetos de documento (DOM) es una interfaz independiente de la plataforma y el lenguaje que permite a los programas y scripts el acceso dinámico y la actualización del contenido, estructura y estilo de documentos \cite{Rob98}. El DOM se crea al momento de cargar una página y es construido como un objeto con estructura de árbol \cite{JsHD}, como se muestra en la Figura X. El DOM provee una representación del documento como una estructura de nodos que posee propiedades, métodos y manejadores de eventos. El DOM esencialmente conecta la página web a los scripts o lenguajes de programación \cite{MozDOM}.
-
-%TO-DO: [agregar imagen del inspector]
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.85\textwidth]{fig18.png}
+  \caption[Modelo de objetos de documento (DOM)]{El árbol DOM del algoritmo \ref{snipjs} obtenido con "Google Chrome Web Inspector"}
+  \label{fig:fig18}
+\end{figure}
 
 \subsection{JavaScript}
 
@@ -81,9 +83,9 @@ Haciendo uso del DOM, JavaScript puede crear HTML dinámico de la siguiente mane
   \item Creando nuevos eventos HTML
 \end{itemize}
 
-El siguiente es un ejemplo de una página HTML que haciendo uso de JavaScript muestra la fecha y hora local luego de presionar un botón.
+El Algoritmo \ref{snipjs} es un ejemplo de una página HTML que haciendo uso de JavaScript muestra la fecha y hora local luego de presionar un botón.
 
-\lstinputlisting[label=snipjs,caption={Snippet de código JavaScript}]{snippets/snippetjs.html}
+\lstinputlisting[language=HTML,label=snipjs,caption={Fragmento de código JavaScript \cite{JsTut}}]{snippets/snippetjs.html}
 
 \subsection{SVG}
 
@@ -91,12 +93,12 @@ SVG es el lenguaje de marcado XML para describir gráficos de aplicación e imá
 
 Usando SVG se pueden crear gráficos de alta calidad, completamente escalables y reusables; desde gráficos simples hasta potenciar páginas webs, desde diagramas interactivos hasta visualizaciones de datos. SVG es soportado por todos los browser modernos y está disponible para una gran variedad de dispositivos móviles.
 
-El siguiente es un ejemplo del uso de SVG para dibujar un círculo con un gradiente que simula el efecto de profundidad
-\lstinputlisting[label=snipsvg,caption={Snippet de código SVG}]{snippets/snippet.svg}
+El Algoritmo \ref{snipsvg} es un ejemplo del uso de SVG para dibujar un círculo con un gradiente que simula el efecto de profundidad
+\lstinputlisting[language=XML,label=snipsvg,caption={Fragmento de código SVG \cite{Gra13}}]{snippets/snippet.svg}
 
 \subsection{D3.js}
 
-D3 es una librería de JavaScript que permite la inspección y manipulación directa del modelo de objetos del documento (DOM) \cite{D3JS}. Fue desarrollada por Mike Bostock bajo la licencia BSD y se encuentra disponible en Github \url{https://github.com/mbostock/d3}. Con D3, el diseñador de manera selectiva vincula los datos de entrada a elementos arbitrarios del documento y luego aplica transformaciones dinámicas al contenido generado \cite{Bos11}. Las transformaciones en D3 facilitan la implementación de visualizaciones dinámicas mediante control explícito de los elemento del modelo de objetos de dominio (DOM) y la evaluación inmediata de operadores sobre dichos elementos.
+D3 es una librería de JavaScript que permite la inspección y manipulación directa del modelo de objetos del documento (DOM) \cite{D3JS}. Fue desarrollada por Mike Bostock bajo la licencia BSD y se encuentra disponible en Github \footnote{\url{https://github.com/mbostock/d3}}. Con D3, el diseñador de manera selectiva vincula los datos de entrada a elementos arbitrarios del documento y luego aplica transformaciones dinámicas al contenido generado \cite{Bos11}. Las transformaciones en D3 facilitan la implementación de visualizaciones dinámicas mediante control explícito de los elemento del modelo de objetos de dominio (DOM) y la evaluación inmediata de operadores sobre dichos elementos.
 
 D3 no es un framework monolítico que busca proveer todas las funcionalidades posibles. De lo contrario, se enfoca en la manipulación eficiente de un documentos en base a datos. Esto evita las representaciones propietarias y permite extraordinaria flexibilidad, exponiendo las capacidades de los estándares web como CSS3, HTML5 y SVG. D3 es extremadamente rápido, soporta grandes conjuntos de datos y comportamiento dinámico para interacciones. El estilo funcional de D3 garantiza códigos reusable y una amplia colección de componentes y plugins \cite{D3JS}.
 
