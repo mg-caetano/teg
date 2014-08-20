@@ -100,7 +100,14 @@ El Algoritmo \ref{snipsvg} es un ejemplo del uso de SVG para dibujar un círculo
 
 D3 es una librería de JavaScript que permite la inspección y manipulación directa del modelo de objetos del documento (DOM) \cite{D3JS}. Fue desarrollada por Mike Bostock bajo la licencia BSD y se encuentra disponible en Github \footnote{\url{https://github.com/mbostock/d3}}. Con D3, el diseñador de manera selectiva vincula los datos de entrada a elementos arbitrarios del documento y luego aplica transformaciones dinámicas al contenido generado \cite{Bos11}. Las transformaciones en D3 facilitan la implementación de visualizaciones dinámicas mediante control explícito de los elemento del modelo de objetos de dominio (DOM) y la evaluación inmediata de operadores sobre dichos elementos.
 
-D3 no es un framework monolítico que busca proveer todas las funcionalidades posibles. De lo contrario, se enfoca en la manipulación eficiente de un documentos en base a datos. Esto evita las representaciones propietarias y permite extraordinaria flexibilidad, exponiendo las capacidades de los estándares web como CSS3, HTML5 y SVG. D3 es extremadamente rápido, soporta grandes conjuntos de datos y comportamiento dinámico para interacciones. El estilo funcional de D3 garantiza códigos reusable y una amplia colección de componentes y plugins \cite{D3JS}.
+D3 no es un framework monolítico que busca proveer todas las funcionalidades posibles. De lo contrario, se enfoca en la manipulación eficiente de un documentos en base a datos. Esto evita las representaciones propietarias y permite extraordinaria flexibilidad, exponiendo las capacidades de los estándares web como CSS3, HTML5 y SVG \Fig{fig:fig19}{}. D3 es extremadamente rápido, soporta grandes conjuntos de datos y comportamiento dinámico para interacciones. El estilo funcional de D3 garantiza códigos reusable y una amplia colección de componentes y plugins \cite{D3JS}. D3 es soportado por Firefox, Chrome, Safari, Opera, IE9+, Android and iOS \cite{GitD3}.
+
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{fig19.png}
+  \caption[Visualización de la aparición simultánea de personajes en Les Misérables]{Visualización de la aparición simultánea de personajes en Les Misérables mediante un grafo dirigido por fuerza\cite{D3JS}. Una simulación física de partículas y puentes cargados colocan a personajes relacionados en cercana proximidad, mientras que los personajes no relacionados están más separadas.}
+  \label{fig:fig19}
+\end{figure}
 
 \subsection{Raphael.js}
 
