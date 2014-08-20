@@ -54,7 +54,7 @@ CCS3 es la última revisión del lenguaje CSS y tiene como objetivo extender la 
 
 \subsection{DOM}
 
-El modelo de objetos de documento (DOM) es una interfaz independiente de la plataforma y el lenguaje que permite a los programas y scripts el acceso dinámico y la actualización del contenido, estructura y estilo de documentos \cite{Rob98}. El DOM se crea al momento de cargar una página y es construido como un objeto con estructura de árbol \cite{JsHD}, como se muestra \figlink{fig:fig18}. El DOM provee una representación del documento como una estructura de nodos que posee propiedades, métodos y manejadores de eventos. El DOM esencialmente conecta la página web a los scripts o lenguajes de programación \cite{MozDOM}.
+El modelo de objetos de documento (DOM) es una interfaz independiente de la plataforma y el lenguaje que permite a los programas y scripts el acceso dinámico y la actualización del contenido, estructura y estilo de documentos \cite{Rob98}. El DOM se crea al momento de cargar una página y es construido como un objeto con estructura de árbol \cite{JsHD}, como se muestra \figlink{fig:fig18}{}. El DOM provee una representación del documento como una estructura de nodos que posee propiedades, métodos y manejadores de eventos. El DOM esencialmente conecta la página web a los scripts o lenguajes de programación \cite{MozDOM}.
 
 \begin{figure}[htp]
   \centering
@@ -104,9 +104,14 @@ D3 no es un framework monolítico que busca proveer todas las funcionalidades po
 
 \subsection{Raphael.js}
 
-Es una librería de JavaScript para trabajar de manera sencilla con gráficos vectoriales en la Web \cite{RaphJS}. Permite hacer tareas como crear gráficos personalizados, cortar imágenes y rotar widgets. Básicamente provee un API para la manipulación de SVG y el soporte de SVG para Internet Explorer \cite{Bar09}. Cada objeto que se crea es también un objeto DOM que puede modificarse posteriormente o adjuntársele manejadores de eventos de JavaScript. Esto permite la creación de visualizaciones interactivas y animaciones. Raphael soporta Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ e Internet Explorer 6.0+.
+Es una librería de JavaScript para trabajar de manera sencilla con gráficos vectoriales en la Web \cite{RaphJS}. Fue desarrollada por Dmitry Baranovski y se encuentra alojada en Github \footnote{\url{https://github.com/DmitryBaranovskiy/raphael}}. Permite hacer tareas como crear gráficos personalizados, cortar imágenes y rotar widgets. Básicamente provee un API para la manipulación de SVG y el soporte de SVG para Internet Explorer \cite{Bar09}. Cada objeto que se crea es también un objeto DOM que puede modificarse posteriormente o adjuntársele manejadores de eventos de JavaScript. Esto permite la creación de visualizaciones interactivas y animaciones \Fig{fig:fig20}{}. Raphael soporta Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ e Internet Explorer 6.0+.
 
-%TO-DO: [[Agregar raphael_pic.jpeg, fuente: http://raphaeljs.com/github/dots.html]]
+\begin{figure}[htp]
+  \centering
+  \includegraphics[width=0.6\textwidth]{fig20.png}
+  \caption[Demo "Languages" de la libreria Raphael.js]{Demo "Languages" de la libreria Raphael.js \cite{RaphJS}. Visualización de un gráfico de tortas sobre el uso de lenguajes de progamación.}
+  \label{fig:fig20}
+\end{figure}
 
 \subsection{Processing.js}
 
