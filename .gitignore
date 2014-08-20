@@ -7,8 +7,8 @@
 *.run.xml
 *.toc
 *-blx.bib
-*.pdf
 *.bcf
 *.lof
 *.lot
 *.lol
+document/reference/books/*.pdf
