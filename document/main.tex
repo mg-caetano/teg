@@ -31,8 +31,7 @@
 
 \usepackage{listings}
 \renewcommand{\lstlistingname}{Algoritmo}
-\renewcommand{\lstlistlistingname}{Índice de algoritmos}
-\lstset{ %
+\lstset{
   basicstyle={\tiny\ttfamily},
   frame=l,
   captionpos=b,
@@ -53,13 +52,29 @@
 \newcommand\Figlink[2]{\hyperref[#1]{La Figura~\ref*{#1}{#2}}}
 \newcommand\Fig[2]{\hyperref[#1]{(Fig.~\ref*{#1}{#2})}}
 
-\lstset{
-  basicstyle=\scriptsize,
-  %frame=single,
-  breaklines=true,
-  breakatwhitespace=false
-  extendedchars=true,
-}
+\makeatletter
+\providecommand\phantomsection{}
+
+\newcommand\listofillustrations{
+    \chapter*{Lista de Ilustraciones}
+    \phantomsection
+    \addcontentsline{toc}{chapter}{Lista de Ilustraciones}
+    \section*{Figuras}
+    \phantomsection
+    \addcontentsline{toc}{section}{\protect\numberline{}Figuras}
+    \@starttoc{lof}
+    \bigskip
+    \section*{Tablas}
+    \phantomsection
+    \addcontentsline{toc}{section}{\protect\numberline{}Tablas}
+    \@starttoc{lot}
+    \bigskip
+    \section*{Algoritmos}
+    \phantomsection
+    \addcontentsline{toc}{section}{\protect\numberline{}Algoritmos}
+    \@starttoc{lol}}
+
+\makeatother
 
 \begin{document}
 
@@ -71,11 +86,7 @@
 
 \tableofcontents
 
-\listoffigures
-
-\listoftables
-
-\lstlistoflistings
+\listofillustrations
 
 % Main Matter
 \chapter*{Introducción}
