@@ -125,9 +125,9 @@ La visualización empleada en este estudio usa una perspectiva de análisis de r
 \end{figure}
 
 \section{Visualización de Propiedades de Historiales de Artículos de Wikis Mediante un Enfoque de Ingeniería Dirigida por Modelos}
-En este trabajo se describe un enfoque dirigido por modelos para el procesamiento del historial de los artículos de un sistema Wiki basado en MediaWiki \cite{Sca08}. En él se describe cómo se pueden calcular propiedades alternas a las disponibles, así como la generación de reportes y visualizaciones gráficas de la información. El proceso se compone de cuatro fases.
+En este trabajo se describe un enfoque dirigido por modelos para el procesamiento de los historiales de artículos de un sistema Wiki basado en MediaWiki \cite{Sca08}. En él se describe cómo se pueden calcular propiedades alternas a las disponibles, así como la generación de reportes y visualizaciones gráficas de la información.
 
-En la primera se define un metamodelo del dominio \Fig{fig:fig14}{}. En la segunda fase se genera un mecanismo para convertir los historiales en un modelo conforme con el metamodelo definido. En la tercera fase se hace uso del modelo para desarrollar transformaciones que calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
+El proceso planteado consiste en definir un metamodelo del dominio \Fig{fig:fig14}{} el cual es empleado para generar un modelo que describa los historiales. El modelo es luego usado para desarrollar transformaciones que calculen propiedades sobre los datos. Se definen tres tipos de propiedades: generales, con clasificador y específicas. Las generales son propiedades numéricas (enteras o reales) calculadas para un artículo. Las propiedades con clasificador son aquellas similares a las generales, pero que agrupan o discriminan por una condición denominada clasificador. Las propiedades específicas son aquellas orientadas a visualizaciones particulares o reportes de los datos gestionados por el Wiki. Se cita como ejemplo de propiedad específica la calculada para la generación del gráfico History Flow.
 
 \begin{figure}[htp]
   \centering
@@ -136,7 +136,7 @@ En la primera se define un metamodelo del dominio \Fig{fig:fig14}{}. En la segun
   \label{fig:fig14}
 \end{figure}
 
-En la cuarta fase se generan reportes o representaciones gráficas con las propiedades (métricas) calculadas. En el trabajo se hacen las siguientes recomendaciones en ese sentido:
+Por último, se generan reportes o representaciones gráficas con las propiedades (métricas) calculadas. En el trabajo se hacen las siguientes recomendaciones en ese sentido:
 
 \begin{itemize}
   \item Si se desean comparar las propiedades generales entre distintos artículos del Wiki, resultan apropiado los reportes mediante tablas o diagramas de barras.
