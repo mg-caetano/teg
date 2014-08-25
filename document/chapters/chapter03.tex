@@ -9,7 +9,7 @@ Actualmente existen toolkits que aprovechan estas tecnologías para la generaci�
   \item LIbrerías para el diseño de visualizaciones 3D
 \end{itemize}
 
-En este capítulo se presentan las más recientes especificaciones de las tecnologías fundamentales para la visualización, que incluyen HTML, CSS, DOM, scripting (JavaScript) y gráficos (PNG, SVG, Canvas, WebCGM). Por último se presentan aquellos toolkits que permiten el dibujar gráficos vectoriales sin limitarse a plantillas prediseñadas (D3.js, Processing.js, Raphael.js, Paper.js).
+En este capítulo se presentan las más recientes especificaciones de las tecnologías fundamentales para la visualización, que incluyen HTML, CSS, DOM, scripting (JavaScript) y gráficos (PNG, SVG, Canvas, WebCGM). Por último se presentan aquellos toolkits que permiten dibujar gráficos vectoriales sin limitarse a plantillas prediseñadas (D3.js, Processing.js, Raphael.js, Paper.js).
 
 \section{Fundamentos tecnológicos}
 
@@ -21,7 +21,7 @@ En un documento HTML un elemento se denota mediante un par de etiquetas, una ini
 
 \lstinputlisting[language=HTML,label=sniphtml,caption={[Fragmento de código HTML] Fragmento de código HTML \cite{HnC13}}]{snippets/snippet.html}
 
-HTML5 es la quinta revisión del estándar HTML. Esta especificación intenta resolver las fallas que las anteriores tenían en el área de las aplicaciones web, ofreciendo un lenguaje de marcado y un conjunto de scripting APIs enfocados en la semántica \cite{Html5}. En cuanto al lenguaje de marcado, se introduce una conjunto de elementos y atributos nuevos entre los cuales están \cite{Diff13}:
+HTML5 es la quinta revisión del estándar HTML. Esta especificación intenta resolver las fallas que las anteriores tenían en el área de las aplicaciones web, ofreciendo un lenguaje de marcado y un conjunto de scripting APIs enfocados en la semántica \cite{Html5}. En cuanto al lenguaje de marcado, se introduce un conjunto de elementos y atributos nuevos entre los cuales están \cite{Diff13}:
 
 \begin{itemize}
   \item Los semánticos, que son aquellos enfocados en mejorar la estructura del documento, como por ejemplo section, nav y header;
@@ -41,7 +41,7 @@ La sintaxis de CSS posee dos bloques básicos de construcción: la propiedad, qu
 
 \lstinputlisting[label=snipcss,caption={[Fragmento de código CSS] Fragmento de código CSS \cite{Wp14}}]{snippets/snippet.css}
 
-Las hojas de estilo pueden declararse dentro de un elemento HTML, dentro de la sección 'head' de un documento HTML o en un archivo CSS externo. Para determinar qué estilo va a ser usado cuando hay más de un estilo declarado para un mismo elemento HTML, se sigue lo que se conoce como orden de escascadamiento. En él los estilos prevalecen según el siguiente orden de prioridad ascendente \cite{CssHT}:
+Las hojas de estilo pueden declararse dentro de un elemento HTML, dentro de la sección 'head' de un documento HTML o en un archivo CSS externo. Para determinar qué estilo va a ser usado cuando hay más de un estilo declarado para un mismo elemento HTML, se sigue lo que se conoce como orden de encascadamiento. En él los estilos prevalecen según el siguiente orden de prioridad ascendente \cite{CssHT}:
 
 \begin{itemize}
   \item Estilo predefinido del navegador
@@ -98,14 +98,14 @@ Usando SVG se pueden crear gráficos de alta calidad, completamente escalables y
 
 \subsection{D3.js}
 
-D3 es una librería de JavaScript que permite la inspección y manipulación directa del modelo de objetos del documento (DOM) \cite{D3JS}. Fue desarrollada por Mike Bostock bajo la licencia BSD y se encuentra disponible en Github \footnote{\url{https://github.com/mbostock/d3}}. Con D3, el diseñador de manera selectiva vincula los datos de entrada a elementos arbitrarios del documento y luego aplica transformaciones dinámicas al contenido generado \cite{Bos11}. Las transformaciones en D3 facilitan la implementación de visualizaciones dinámicas mediante control explícito de los elemento del modelo de objetos de dominio (DOM) y la evaluación inmediata de operadores sobre dichos elementos.
+D3 es una librería de JavaScript que permite la inspección y manipulación directa del modelo de objetos del documento (DOM) \cite{D3JS}. Fue desarrollada por Mike Bostock bajo la licencia BSD y se encuentra disponible en Github \footnote{\url{https://github.com/mbostock/d3}}. Con D3, el diseñador de manera selectiva vincula los datos de entrada a elementos arbitrarios del documento y luego aplica transformaciones dinámicas al contenido generado \cite{Bos11}. Las transformaciones en D3 facilitan la implementación de visualizaciones dinámicas mediante control explícito de los elemento del DOM y la evaluación inmediata de operadores sobre dichos elementos.
 
-D3 no es un framework monolítico que busca proveer todas las funcionalidades posibles. De lo contrario, se enfoca en la manipulación eficiente de un documentos en base a datos. Esto evita las representaciones propietarias y permite extraordinaria flexibilidad, exponiendo las capacidades de los estándares web como CSS3, HTML5 y SVG \Fig{fig:fig19}{}. D3 es extremadamente rápido, soporta grandes conjuntos de datos y comportamiento dinámico para interacciones. El estilo funcional de D3 garantiza códigos reusable y una amplia colección de componentes y plugins \cite{D3JS}. D3 es soportado por Firefox, Chrome, Safari, Opera, IE9+, Android and iOS \cite{GitD3}.
+D3 no es un framework monolítico que busca proveer todas las funcionalidades posibles. De lo contrario, se enfoca en la manipulación eficiente de documentos en base a datos. Esto evita las representaciones propietarias y permite extraordinaria flexibilidad, exponiendo las capacidades de los estándares web como CSS3, HTML5 y SVG \Fig{fig:fig19}{}. D3 es extremadamente rápido, soporta grandes conjuntos de datos y comportamiento dinámico para interacciones. El estilo funcional de D3 garantiza códigos reusable y una amplia colección de componentes y plugins \cite{D3JS}. D3 es soportado por Firefox, Chrome, Safari, Opera, IE9+, Android y iOS \cite{GitD3}.
 
 \begin{figure}[htp]
   \centering
   \includegraphics[width=0.6\textwidth]{fig19.png}
-  \caption[Visualización de la aparición simultánea de personajes en Les Misérables usando D3.js]{Visualización de la aparición simultánea de personajes en Les Misérables mediante un grafo dirigido por fuerza \protect\footnotemark. Una simulación física de partículas y puentes cargados colocan a personajes relacionados en cercana proximidad, mientras que los personajes no relacionados están más separadas.}
+  \caption[Visualización de la aparición simultánea de personajes en Les Misérables usando D3.js]{Visualización de la aparición simultánea de personajes en Les Misérables mediante un grafo dirigido por fuerza \protect\footnotemark. Una simulación física de partículas y puentes cargados colocan a personajes relacionados en cercana proximidad, mientras que los personajes no relacionados están más separados.}
   \label{fig:fig19}
 \end{figure}
 
